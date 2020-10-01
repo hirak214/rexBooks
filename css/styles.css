@@ -1,0 +1,21 @@
+
+img:hover {
+  transform: scale(1.11);
+}
+
+
+.clip-text {
+  background: url('https://media.giphy.com/media/3o85xH0vZ6np1ciShW/giphy.gif');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  flex-shrink: 0;
+}
