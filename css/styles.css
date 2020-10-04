@@ -1,3 +1,7 @@
+body {
+background-color: black;
+  /* background-image: url("/Users/hirakdesai/Documents/WorkSpace/GitHub/rexBooks/images/mainwall.png"); */
+}
 
 img:hover {
   transform: scale(1.11);
@@ -18,4 +22,98 @@ img:hover {
   text-align: center;
   line-height: 100px;
   flex-shrink: 0;
+}
+
+h1 {
+  color: white;
+}
+
+.section-odd {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-right: 230px;
+  margin-left: 230px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-even {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-right: 230px;
+  margin-left: 230px;
+  margin-bottom: 30px;
+  background-color: rgba(203, 173, 72, 0.3);
+}
+
+
+
+
+
+
+
+      @media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
 }
