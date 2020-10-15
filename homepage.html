@@ -3,21 +3,71 @@
   <head>
     <meta charset="utf-8">
     <title>Rex Books</title>
-
-      <link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="http://localhost:8080/rexBooks/favicon.png" type="image/gif" sizes="16x16">
+     
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="http://localhost:8080/rexBooks/css/styles.css">
+
+     <!-- Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style type="text/css">
+      body {
+        background-image: url("http://localhost:8080/rexBooks/images/mainwall.png");
+        margin-bottom: 0px;
+      }
+
+.basefooter {
+  width: 100%;
+  height: 50px;
+  background-color: #442727;
+  color: wheat;
+  font-family: "Comfortaa";
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+
+.navbar-custom {
+    background-color: #442727;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+color: wheat;
+    font-size: 1.06rem;
+}
+
+
+
+
+    </style>
   </head>
   <body>
-    <br><br>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#" style="font-size: 2.7rem;">RexBooks</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top  navbar-custom" data-aos="fade-down">
+      <a class="navbar-brand" href="homepage.html" style="font-size: 2.7rem; font-family: 'Pacifico', cursive;">RexBooks</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,132 +75,208 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link disabled"  href="#"><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="http://localhost:8080/rexBooks/upload.html">Upload Book</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="http://localhost:8080/rexBooks/request.html" tabindex="-1" aria-disabled="true">Request Book</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Classics</a>
+              <a class="dropdown-item" href="http://localhost:8080/rexBooks/bookPages/cat/classics.html">Classics</a>
               <a class="dropdown-item" href="#">Sci-Fi</a>
-              <a class="dropdown-item" href="#">Biography</a>
+              <a class="dropdown-item" href="http://localhost:8080/rexBooks/bookPages/cat/magazines.html">Magazines</a>  
+              <a class="dropdown-item" href="#">Action & Adventure</a>
+              <a class="dropdown-item" href="http://localhost:8080/rexBooks/bookPages/cat/comics.html">Comics</a>
+              <a class="dropdown-item" href="#">Mystery & Detective</a>
+              <a class="dropdown-item" href="#">Fantasy</a>
+              <a class="dropdown-item" href="#">Fiction</a>
+              <a class="dropdown-item" href="http://localhost:8080/rexBooks/bookPages/cat/horror.html">Horror</a>
+              <a class="dropdown-item" href="#">Romance</a>
+              <a class="dropdown-item" href="#">Sci-Fi</a>
+              <a class="dropdown-item" href="#">Suspense & Thrillers</a>
+              <a class="dropdown-item" href="http://localhost:8080/rexBooks/bookPages/cat/bio.html">Biographies & Autobiographies</a>
+              <a class="dropdown-item" href="#">Self Help</a>
+              <a class="dropdown-item" href="#">True Crime</a>
             </div>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
 
-
-        <div class="section-odd">
-          <h1>Best Sellers</h1>
+<br><br><br><br><br>
+        <div class="section-odd" data-aos="fade-up">
+          <a href="http://localhost:8080/rexBooks/bookPages/cat/classics.html"><h1>Best Sellers</h1></a>
             <div class="row">
-              <div class="col-lg-2">
-                <a href="/Users/hirakdesai/Documents/WorkSpace/GitHub/rexBooks/bookpages/thealchemist.html"><img src="images/alchemist.jpg" alt="" width="200" height="270" style="padding: 10px;"></a>
+              <div class="col-lg-2 col-md-4">
+                <a href="bookPages/thealchemist.html" ><img src="images/alchemist.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
               </div>
-              <div class="col-lg-2">
-                <img src="images/inTheSearchOfLostTime.jpg" alt="" width="200" height="270" style="padding: 10px;">
+              <div class="col-lg-2 col-md-4">
+                <img src="images/inTheSearchOfLostTime.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/trespassing.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="images/trespassing.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/harrypotter.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="images/harrypotter.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/marvel.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="images/marvel.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/marvel.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/magazines/mag13.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
           </div>
         </div>
 
-        <div class="section-even">
-          <h1>Classics</h1>
+        <div class="section-even" data-aos="fade-up">
+          <a href="http://localhost:8080/rexBooks/bookPages/cat/classics.html"><h1>Classics</h1></a>
             <div class="row">
-              <div class="col-lg-2">
-                <a href="bookPages/thealchemist.html"><img src="bookCovers/classics/greatExpectations.jpg" alt="" width="200" height="270" style="padding: 10px;"></a>
+              <div class="col-lg-2 col-md-4">
+                <a href=""><img src="bookCovers/classics/greatExpectations.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
               </div>
-              <div class="col-lg-2">
-                <img src="bookCovers/classics/littleWomen.jpg" alt="" width="200" height="270" style="padding: 10px;">
+              <div class="col-lg-2 col-md-4">
+                <img src="bookCovers/classics/littleWomen.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="bookCovers/classics/prideAndPrejudice.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="bookCovers/classics/prideAndPrejudice.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="bookCovers/classics/theGreatgatsby.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <a href="http://localhost:8080/rexBooks/bookPages/thegreatgatsby.html"><img src="bookCovers/classics/theGreatgatsby.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
             </div>
-            <div class="col-lg-2">
-              <img src="bookCovers/classics/toKillAMockingBird.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="bookCovers/classics/toKillAMockingBird.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="bookCovers/classics/theSecretGarden.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="bookCovers/classics/theSecretGarden.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
           </div>
         </div>
 
-        <div class="section-odd">
-          <h1>Magazines</h1>
+        <div class="section-odd" data-aos="fade-up">
+          <a href="http://localhost:8080/rexBooks/bookPages/cat/magazines.html"><h1>Magazines</h1></a>
             <div class="row">
-              <div class="col-lg-2">
-                <a href="/Users/hirakdesai/Documents/WorkSpace/GitHub/rexBooks/bookpages/thealchemist.html"><img src="images/alchemist.jpg" alt="" width="200" height="270" style="padding: 10px;"></a>
+              <div class="col-lg-2 col-md-4">
+                <a href=""><img src="http://localhost:8080/rexBooks/bookCovers/magazines/mag1.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
               </div>
-              <div class="col-lg-2">
-                <img src="images/inTheSearchOfLostTime.jpg" alt="" width="200" height="270" style="padding: 10px;">
+              <div class="col-lg-2 col-md-4">
+                <img src="http://localhost:8080/rexBooks/bookCovers/magazines/mag2.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/trespassing.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/magazines/mag3.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/harrypotter.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/magazines/mag4.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/marvel.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/magazines/mag5.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/marvel.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/magazines/mag6.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
           </div>
         </div>
 
-        <div class="section-even">
-          <h1>Comics</h1>
+        <div class="section-even" data-aos="fade-up">
+          <a href="http://localhost:8080/rexBooks/bookPages/cat/comics.html"><h1>Comics</h1></a>
             <div class="row">
-              <div class="col-lg-2">
-                <a href="bookPages/thealchemist.html"><img src="images/alchemist.jpg" alt="" width="200" height="270" style="padding: 10px;"></a>
+              <div class="col-lg-2 col-md-4">
+                <a href=""><img src="http://localhost:8080/rexBooks/bookCovers/comics/com1.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
               </div>
-              <div class="col-lg-2">
-                <img src="images/inTheSearchOfLostTime.jpg" alt="" width="200" height="270" style="padding: 10px;">
+              <div class="col-lg-2 col-md-4">
+                <img src="http://localhost:8080/rexBooks/bookCovers/comics/com2.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/trespassing.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/comics/com3.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/harrypotter.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/comics/com4.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/marvel.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/comics/com5.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
-            <div class="col-lg-2">
-              <img src="images/marvel.jpg" alt="" width="200" height="270" style="padding: 10px;">
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/comics/com6.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
           </div>
         </div>
 
+        <div class="section-odd" data-aos="fade-up">
+           <a href="http://localhost:8080/rexBooks/bookPages/cat/horror.html"><h1>Horror</h1></a>
+            <div class="row">
+              <div class="col-lg-2 col-md-4">
+                <a href=""><img src="http://localhost:8080/rexBooks/bookCovers/horror/hor1.png" alt="" width="100%" height="85%" style="padding: 1%;"></a>
+              </div>
+              <div class="col-lg-2 col-md-4">
+                <img src="http://localhost:8080/rexBooks/bookCovers/horror/hor2.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/horror/hor3.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/horror/hor4.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/horror/hor5.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/horror/hor6.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+          </div>
+        </div>
 
+        <div class="section-even" data-aos="fade-up">
+           <a href="http://localhost:8080/rexBooks/bookPages/cat/bio.html"><h1>Biographies</h1></a>
+            <div class="row">
+              <div class="col-lg-2 col-md-4">
+                <a href=""><img src="http://localhost:8080/rexBooks/bookCovers/biographies/bio1.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
+              </div>
+              <div class="col-lg-2 col-md-4">
+                <img src="http://localhost:8080/rexBooks/bookCovers/biographies/bio2.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/biographies/bio3.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/biographies/bio4.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/biographies/bio5.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <img src="http://localhost:8080/rexBooks/bookCovers/biographies/bio6.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+            </div>
+          </div>
+        </div>
+<div class="basefooter">
+  <p>RexBooks - For the Bookworms out there<br>
+  All rights reserved RexBooks 2020</p>
+</div>
 
 <!-- JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+<!-- Animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+
+  delay: 200, // values from 0 to 3000, with step 50ms
+  duration: 1500, // values from 0 to 3000, with step 50ms
+  
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+     } );
+  </script>
+
   </body>
 </html>
