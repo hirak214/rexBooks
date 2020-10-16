@@ -1,12 +1,16 @@
 body {
-background-color: black;
-  background-image: url("/Users/hirakdesai/Documents/WorkSpace/GitHub/rexBooks/images/mainwall.png");
+background-image: url("http://localhost:8080/rexBooks/images/mainwall.png");
+
+
 }
 
 h1 {
   color: white;
+  text-align: center;
+}
+h2 {
+	color: #8f8f8f;
+	text-align: right;
 }
 
-h3 {
-  color: lightgrey;
-}
+
