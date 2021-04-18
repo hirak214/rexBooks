@@ -1,113 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
-      <title>Rex Books</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>RexBooks@admin</title>
+      <style>
+         <?php include 'css/table.css'; ?>
+      </style>
       <link rel="icon" href="http://localhost:8080/rexBooks/favicon.png" type="image/gif" sizes="16x16">
       <!-- CSS only -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sriracha&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/styles.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
-      <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap">
       <!-- Font Awesome -->
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <link rel="stylesheet" href="styles.css">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sriracha&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="http://localhost:8080/rexBooks/css/styles.css">
+      <!-- Animation -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <style type="text/css">
-         body, html {
+         body {
          background-image: url("http://localhost:8080/rexBooks/images/mainwall.png");
-         background-color: #ebecf0;
-         }
-         body, p, input, select, textarea, button {
-         font-family: 'Montserrat', sans-serif;
-         letter-spacing: -0.2px;
-         font-size: 16px;
-         }
-         div, p {
-         color: #babecc;
-         text-shadow: 1px 1px 1px #fff;
-         }
-         form {
-         padding: 16px;
-         width: 320px;
-         margin: 0 auto;
-         }
-         .segment {
-         padding: 32px 0;
-         text-align: center;
-         }
-         button, input {
-         border: 0;
-         outline: 0;
-         font-size: 16px;
-         border-radius: 320px;
-         padding: 16px;
-         background-color: #ebecf0;
-         text-shadow: 1px 1px 0 #fff;
-         }
-         label {
-         display: block;
-         margin-bottom: 24px;
-         width: 100%;
-         }
-         input {
-         margin-right: 8px;
-         box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
-         width: 100%;
-         box-sizing: border-box;
-         transition: all 0.2s ease-in-out;
-         appearance: none;
-         -webkit-appearance: none;
-         }
-         input:focus {
-         box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-         }
-         button {
-         color: #61677c;
-         font-weight: bold;
-         box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
-         box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-         transition: all 0.2s ease-in-out;
-         cursor: pointer;
-         font-weight: 600;
-         }
-         button:hover {
-         box-shadow: -4px -4px 10px #a1623d, 4px 4px 10px #a1623d;
-         }
-         button:active {
-         box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-         }
-         button .icon {
-         margin-right: 8px;
-         }
-         button.unit {
-         border-radius: 8px;
-         line-height: 0;
-         width: 48px;
-         height: 48px;
-         display: inline-flex;
-         justify-content: center;
-         align-items: center;
-         margin: 0 8px;
-         font-size: 19.2px;
-         }
-         button.unit .icon {
-         margin-right: 0;
-         }
-         button.red {
-         display: block;
-         width: 100%;
-         color: #ae1100;
-         }
-         .input-group {
-         display: flex;
-         align-items: center;
-         justify-content: flex-start;
-         }
-         .input-group label {
-         margin: 0;
-         flex: 1;
+         margin-bottom: 0px;
+         color: white;
          }
          .basefooter {
          width: 100%;
@@ -122,8 +39,6 @@
          }
          .navbar-custom {
          background-color: #442727;
-         font-family: sans-serif;
-         text-shadow: 0px 0px 0px;
          }
          /* change the brand and text color */
          .navbar-custom .navbar-brand,
@@ -143,7 +58,8 @@
       </style>
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top  navbar-custom" data-aos="fade-down">
+      <br><br><br><br><br><br>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top  navbar-custom" >
          <a class="navbar-brand" href="homepage.html" style="font-size: 2.7rem; font-family: 'Pacifico', cursive;">RexBooks</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -154,10 +70,10 @@
                   <a class="nav-link disabled"  href="#"><span class="sr-only">(current)</span></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="http://localhost:8080/rexBooks/upload.html">Upload Book</a>
+                  <a class="nav-link" href="http://localhost:8080/rexBooks/userUpload.php">Upload Book DB</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="http://localhost:8080/rexBooks/request.html" tabindex="-1" aria-disabled="true">Request Book</a>
+                  <a class="nav-link" href="http://localhost:8080/rexBooks/userReq.php" tabindex="-1" aria-disabled="true">Request Book DB</a>
                </li>
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
@@ -180,25 +96,84 @@
                   </div>
                </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </form>
          </div>
       </nav>
-      <br><br><br><br><br>
-      <div class="segment">
-         <h1>Upload Book</h1>
-      </div>
-      <form method="post" name="registration" action="upload.php" onsubmit="return validateUpload()" enctype="multipart/form-data">
-         <label><input name="title" type="text" placeholder="Title"/></label>
-         <label><input name="author" type="text" placeholder="Author/Publication"/></label>
-         <label><input name="description" type="text" placeholder="Description"/ style="height: 70px;"></label>
-         <label><input name="genre" type="text" placeholder="Genre"/></label>
-         <label><input name="year" type="text" placeholder="Year Of Publish"/></label>
-         <label><input name="language" type="text" placeholder="Language"/></label>
-         <label><input name="file1" type="file"></label>
-         <button class="red" type="submit" value="submit" onclick="submitForm()"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
-      </form>
+      <h1 style="text-align: center; text-decoration: underline; color: beige; font-size: 3em;">Upload Book</h1>
+      <table>
+         <tr>
+            <form method="post" name="registration" action="adminUpload.php" onsubmit="return validateUpload()" enctype="multipart/form-data">
+               <td><input name="title" type="text" placeholder="Title"/></td>
+               <td><input name="author" type="text" placeholder="Author/Publication"/></td>
+               <td><input name="description" type="text" placeholder="Description" /></td>
+               <td><input name="genre" type="text" placeholder="Genre"/></td>
+         </tr>
+         <tr>
+         <td><input name="year" type="text" placeholder="Year Of Publish"/></td>
+         <td><input name="language" type="text" placeholder="Language"/></td>
+         <td><label><input name="file1" type="file"></label></td>
+         <td><button class="red" type="submit" value="submit"><i class="fas fa-cloud-upload-alt"></i> Upload</button></td>
+         </form>
+         </tr>
+      </table>
+      <br><br><br><br>
+      <h1 style="text-align: center; text-decoration: underline; color: beige; font-size: 3em;">Books Database</h1>
+      <?php 
+         $username = "root"; 
+         $password = ""; 
+         $database = "test"; 
+         $mysqli = new mysqli("localhost", $username, $password, $database); 
+         $query = "SELECT * FROM BookDB";
+         
+         
+         echo '<table border="0" cellspacing="2" cellpadding="2"> 
+               <tr> 
+                   <td> <font face="Arial">BookID</font> </td> 
+                   <td> <font face="Arial">Title</font> </td> 
+                   <td> <font face="Arial">Author</font> </td> 
+                   <td> <font face="Arial">Description</font> </td> 
+                   <td> <font face="Arial">Genre</font> </td> 
+                   <td> <font face="Arial">Year</font> </td> 
+                   <td> <font face="Arial">Language</font> </td> 
+                   <td> <font face="Arial">File</font> </td> 
+                   <td> <font face="Arial">Modify</font> </td> 
+                   <td> <font face="Arial">Delete</font> </td> 
+               </tr>';
+         
+         if ($result = $mysqli->query($query)) {
+             while ($row = $result->fetch_assoc()) {
+                 $bookid = $row["BookID"];
+                 $title = $row["Title"];
+                 $author = $row["Author"];
+                 $description = $row["Description"];
+                 $genre = $row["Genre"]; 
+                 $year = $row["Year"]; 
+                 $language = $row["Language"]; 
+                 $file = $row["File"]; 
+         
+                 echo '<tr> 
+                           <td>'.$bookid.'</td> 
+                           <td>'.$title.'</td> 
+                           <td>'.$author.'</td> 
+                           <td>'.$description.'</td> 
+                           <td>'.$genre.'</td> 
+                           <td>'.$year.'</td> 
+                           <td>'.$language.'</td>
+                           <td>'.$file.'</td> 
+                           <td><a style="color: green;" href="modify.php?bookid='.$bookid.'" data-toggle="tooltip" data-placement="right" title="UPDATE"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
+                           <td><a style="color: red;" href="del.php?bookid='.$bookid.'" data-toggle="tooltip" data-placement="right" title="DELETE"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                       </tr>';
+             }
+             $result->free();
+         } 
+         
+         ?>
       <script> function submitForm() { 
          document.registration.submit(); 
-         document.serviceform.reset(); } 
+         // document.serviceform.reset(); 
+         } 
       </script>
       <script> 
          function validateUpload() { 
@@ -246,15 +221,10 @@
          	return true; 
          }
       </script> 
-      <br><br><br>
-      <div class="basefooter" data-aos="fade-up">
+      <!-- <div class="basefooter">
          <p>RexBooks - For the Bookworms out there<br>
             All rights reserved RexBooks 2020
          </p>
-      </div>
-      <!-- JS, Popper.js, and jQuery -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      </div> -->
    </body>
 </html>

@@ -28,7 +28,9 @@
         margin-bottom: 0px;
       }
 
-.basefooter {
+      .basefooter {
+	position: fixed;
+	bottom: 0;
   width: 100%;
   height: 50px;
   background-color: #442727;
@@ -37,6 +39,7 @@
   font-size: 1rem;
   text-align: center;
 }
+
 
 
 
@@ -103,7 +106,9 @@ color: wheat;
               <a class="dropdown-item" href="#">True Crime</a>
             </div>
           </li>
+          <a class="nav-link" href="http://localhost:8080/rexBooks/adminlogin.php">Admin Login</a>
         </ul>
+
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         </form>
@@ -111,11 +116,12 @@ color: wheat;
     </nav>
 
 <br><br><br><br><br>
+
         <div class="section-odd" data-aos="fade-up">
           <a href="http://localhost:8080/rexBooks/bookPages/cat/classics.html"><h1>Best Sellers</h1></a>
             <div class="row">
               <div class="col-lg-2 col-md-4">
-                <a href="bookPages/thealchemist.html" ><img src="images/alchemist.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
+                <a href="theAlchemist.php"> <img src="images/alchemist.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
               </div>
               <div class="col-lg-2 col-md-4">
                 <img src="images/inTheSearchOfLostTime.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
@@ -135,11 +141,12 @@ color: wheat;
           </div>
         </div>
 
+
         <div class="section-even" data-aos="fade-up">
           <a href="http://localhost:8080/rexBooks/bookPages/cat/classics.html"><h1>Classics</h1></a>
             <div class="row">
               <div class="col-lg-2 col-md-4">
-                <a href=""><img src="bookCovers/classics/greatExpectations.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
+                <a href="theGreat.php"><img src="bookCovers/classics/greatExpectations.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
               </div>
               <div class="col-lg-2 col-md-4">
                 <img src="bookCovers/classics/littleWomen.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
@@ -154,7 +161,7 @@ color: wheat;
               <img src="bookCovers/classics/toKillAMockingBird.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
             </div>
             <div class="col-lg-2 col-md-4">
-              <img src="bookCovers/classics/theSecretGarden.jpg" alt="" width="100%" height="85%" style="padding: 1%;">
+              <a href="secret.php"><img src="bookCovers/classics/theSecretGarden.jpg" alt="" width="100%" height="85%" style="padding: 1%;"></a>
             </div>
           </div>
         </div>

@@ -110,16 +110,17 @@
          flex: 1;
          }
          .basefooter {
-         width: 100%;
-         height: 50px;
-         background-color: #442727;
-         color: wheat;
-         font-family: "Comfortaa";
-         font-size: 1rem;
-         text-align: center;
-         position: absolute;
-         bottom: 0%;
-         }
+	position: absolute;
+	bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #442727;
+  color: wheat;
+  font-family: "Comfortaa";
+  font-size: 1rem;
+  text-align: center;
+}
+
          .navbar-custom {
          background-color: #442727;
          font-family: sans-serif;
@@ -143,6 +144,36 @@
       </style>
    </head>
    <body>
+   <?php
+    //   include 'modify.php';
+   //  header("Location: ./modify.php");
+            $con = mysqli_connect('localhost', 'root', '', 'test');
+            // get the post records
+            $txtBookID = $_POST['bookid'];
+            $txtTitle = $_POST['title'];
+            $txtAuthor = $_POST['author'];
+            $txtDescription = $_POST['description'];
+            $txtGenre = $_POST['genre'];
+            $txtYear = $_POST['year'];
+            $txtlanguage = $_POST['language'];
+            $filename = $_FILES['file1']['name'];
+            move_uploaded_file($_FILES['file1']['tmp_name'], ($filename));
+            
+            $id = $_GET['bookid'];
+            $showquery = "SELECT * FROM BookDB WHERE BookID=";
+            $finalquery = $showquery . "'" . $id . "'";
+            $showdata = mysqli_query($con,$finalquery);
+            $arrdata = mysqli_fetch_array($showdata);
+
+            // database insert SQL code
+            // $sql = "INSERT INTO `BookDB` (`BookID`, `Title`, `Author`, `Description`, `Genre`, `Year`, `Language`)
+            // VALUES ('$txtBookID', '$txtTitle', '$txtAuthor', '$txtDescription', '$txtGenre','$txtYear', '$txtlanguage')";
+            $query = "UPDATE `BookDB` SET `BookID`='$txtBookID',`Title`='$txtTitle',`Author`='$txtAuthor',`Description`='$txtDescription',`Genre`='$txtGenre',`Year`='$txtYear',`Language`='$txtlanguage', `File`='$filename' WHERE BookId='$id' ";
+            // insert in database
+            $rs = mysqli_query($con,$query);
+            // header('location:admin.php');
+            ?>
+
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top  navbar-custom" data-aos="fade-down">
          <a class="navbar-brand" href="homepage.html" style="font-size: 2.7rem; font-family: 'Pacifico', cursive;">RexBooks</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -184,68 +215,26 @@
       </nav>
       <br><br><br><br><br>
       <div class="segment">
-         <h1>Upload Book</h1>
+         <h1>Modify Book</h1>
       </div>
-      <form method="post" name="registration" action="upload.php" onsubmit="return validateUpload()" enctype="multipart/form-data">
-         <label><input name="title" type="text" placeholder="Title"/></label>
-         <label><input name="author" type="text" placeholder="Author/Publication"/></label>
-         <label><input name="description" type="text" placeholder="Description"/ style="height: 70px;"></label>
-         <label><input name="genre" type="text" placeholder="Genre"/></label>
-         <label><input name="year" type="text" placeholder="Year Of Publish"/></label>
-         <label><input name="language" type="text" placeholder="Language"/></label>
-         <label><input name="file1" type="file"></label>
-         <button class="red" type="submit" value="submit" onclick="submitForm()"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
+      
+      <form method="post" name="modifyBook" action="modify.php">
+              <label><input value="<?php echo $arrdata['BookID'] ?>" name="bookid" type="text"/></label>
+              <label><input value="<?php echo $arrdata['Title'] ?>" name="title" type="text" placeholder="Title"/></label>
+              <label><input value="<?php echo $arrdata['Author'] ?>" name="author" type="text" placeholder="Author/Publication"/></label>
+              <label><input value="<?php echo $arrdata['Description'] ?>" name="description" type="text" placeholder="Description"/></label>
+              <label><input value="<?php echo $arrdata['Genre'] ?>" name="genre" type="text" placeholder="Genre"/></label>
+              <label><input value="<?php echo $arrdata['Year'] ?>" name="year" type="text" placeholder="Year Of Publish"/></label>
+              <label><input value="<?php echo $arrdata['Language'] ?>" name="language" type="text" placeholder="Language"/></label>
+              <label><input value="<?php echo $arrdata['File'] ?>" name="file1" type="file" /></label>
+            
+              <button class="red" type="submit" value="submit"><i class="fas fa-cloud-upload-alt"></i>Update</button> <br>
+              <button class="red"><i class="fas fa-long-arrow-alt-left"></i><a style="padding:5px; color:#ae1100;"href="admin.php">Back</a></button> 
+              
       </form>
-      <script> function submitForm() { 
-         document.registration.submit(); 
-         document.serviceform.reset(); } 
-      </script>
-      <script> 
-         function validateUpload() { 
-         	var title = document.forms["registration"]["name"];			 
-         	var author = document.forms["registration"]["author"]; 
-         	var description = document.forms["registration"]["description"]; 
-         	var genre = document.forms["registration"]["genre"]; 
-         	var year = document.forms["registration"]["year"]; 
-         
-         	if (title.value == "")								 
-         	{ 
-         		window.alert("Please enter a Title"); 
-         		title.focus(); 
-         		return false; 
-         	} 
-         
-         	if (author.value == "")							 
-         	{ 
-         		window.alert("Please enter the Author's name"); 
-         		author.focus(); 
-         		return false; 
-         	} 
-         	
-         	if (description.value == "")								 
-         	{ 
-         		window.alert("Please enter a valid description"); 
-         		description.focus(); 
-         		return false; 
-         	} 
-         
-         	if (genre.value == "")						 
-         	{ 
-         		window.alert("Please enter the contents genre, comma seperated values"); 
-         		genre.focus(); 
-         		return false; 
-         	} 
-         
-         	if (year.value == "" && year.length == 4)					 
-         	{ 
-         		window.alert("Please enter Year of Publication, 4 digit value only"); 
-         		year.focus(); 
-         		return false; 
-         	} 
-         
-         	return true; 
-         }
-      </script> 
+      
+      
+     
       <br><br><br>
       <div class="basefooter" data-aos="fade-up">
          <p>RexBooks - For the Bookworms out there<br>
@@ -256,5 +245,6 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-   </body>
+      
+    </body>
 </html>

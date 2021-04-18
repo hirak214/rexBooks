@@ -97,8 +97,9 @@
          }
          button.red {
          display: block;
-         width: 100%;
+         width: 30%;
          color: #ae1100;
+         margin: auto;
          }
          .input-group {
          display: flex;
@@ -108,17 +109,6 @@
          .input-group label {
          margin: 0;
          flex: 1;
-         }
-         .basefooter {
-         width: 100%;
-         height: 50px;
-         background-color: #442727;
-         color: wheat;
-         font-family: "Comfortaa";
-         font-size: 1rem;
-         text-align: center;
-         position: absolute;
-         bottom: 0%;
          }
          .navbar-custom {
          background-color: #442727;
@@ -139,6 +129,17 @@
          .navbar-custom .nav-item:hover .nav-link {
          color: wheat;
          font-size: 1.06rem;
+         }
+         .basefooter {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         height: 50px;
+         background-color: #442727;
+         color: wheat;
+         font-family: "Comfortaa";
+         font-size: 1rem;
+         text-align: center;
          }
       </style>
    </head>
@@ -179,74 +180,17 @@
                      <a class="dropdown-item" href="#">True Crime</a>
                   </div>
                </li>
+               <a class="nav-link" href="http://localhost:8080/rexBooks/adminlogin.php">Admin Login</a>
             </ul>
          </div>
       </nav>
       <br><br><br><br><br>
       <div class="segment">
-         <h1>Upload Book</h1>
+         <h1>Admin Control Panel</h1>
       </div>
-      <form method="post" name="registration" action="upload.php" onsubmit="return validateUpload()" enctype="multipart/form-data">
-         <label><input name="title" type="text" placeholder="Title"/></label>
-         <label><input name="author" type="text" placeholder="Author/Publication"/></label>
-         <label><input name="description" type="text" placeholder="Description"/ style="height: 70px;"></label>
-         <label><input name="genre" type="text" placeholder="Genre"/></label>
-         <label><input name="year" type="text" placeholder="Year Of Publish"/></label>
-         <label><input name="language" type="text" placeholder="Language"/></label>
-         <label><input name="file1" type="file"></label>
-         <button class="red" type="submit" value="submit" onclick="submitForm()"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
-      </form>
-      <script> function submitForm() { 
-         document.registration.submit(); 
-         document.serviceform.reset(); } 
-      </script>
-      <script> 
-         function validateUpload() { 
-         	var title = document.forms["registration"]["name"];			 
-         	var author = document.forms["registration"]["author"]; 
-         	var description = document.forms["registration"]["description"]; 
-         	var genre = document.forms["registration"]["genre"]; 
-         	var year = document.forms["registration"]["year"]; 
-         
-         	if (title.value == "")								 
-         	{ 
-         		window.alert("Please enter a Title"); 
-         		title.focus(); 
-         		return false; 
-         	} 
-         
-         	if (author.value == "")							 
-         	{ 
-         		window.alert("Please enter the Author's name"); 
-         		author.focus(); 
-         		return false; 
-         	} 
-         	
-         	if (description.value == "")								 
-         	{ 
-         		window.alert("Please enter a valid description"); 
-         		description.focus(); 
-         		return false; 
-         	} 
-         
-         	if (genre.value == "")						 
-         	{ 
-         		window.alert("Please enter the contents genre, comma seperated values"); 
-         		genre.focus(); 
-         		return false; 
-         	} 
-         
-         	if (year.value == "" && year.length == 4)					 
-         	{ 
-         		window.alert("Please enter Year of Publication, 4 digit value only"); 
-         		year.focus(); 
-         		return false; 
-         	} 
-         
-         	return true; 
-         }
-      </script> 
-      <br><br><br>
+      <button class="red"><i class="fas fa-database"></i><a href="admin.php">  Live Database</a></button> <br>
+      <button class="red"><i class="fas fa-users"></i><a href="userUpload.php"> User Uploaded DB</a></button> <br>
+      <button class="red"><i class="fas fa-users"></i><a href="userReq.php"> User Requested DB</a> </button> <br>
       <div class="basefooter" data-aos="fade-up">
          <p>RexBooks - For the Bookworms out there<br>
             All rights reserved RexBooks 2020
